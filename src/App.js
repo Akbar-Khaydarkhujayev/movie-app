@@ -11,7 +11,7 @@ const App = () => {
   const [choosenMovie, setChoosenMovie] = useState("");
 
   const getMoviesRequest = async (inputValue) => {
-    const API = `http://www.omdbapi.com/?s=${inputValue}&apikey=c6c2b122`;
+    const API = `https://www.omdbapi.com/?s=${inputValue}&apikey=c6c2b122`;
     const response = await fetch(API);
     const responseJson = await response.json();
     if (responseJson.Response === "False") {
